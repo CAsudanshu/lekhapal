@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LekhaPal – Install & User Guide</title>
+<style>
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:860px;margin:auto;padding:16px;line-height:1.55;color:#1c2420;background:#fff}
+h1{color:#14532d}h2{color:#14532d;border-bottom:2px solid #e7f3ec;padding-bottom:4px;margin-top:32px}
+code,kbd{background:#f1f4f2;padding:1px 6px;border-radius:4px}.box{background:#e7f3ec;border-radius:10px;padding:12px 16px}
+.warn{background:#fef9c3;border-radius:10px;padding:12px 16px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #dfe3e0;padding:6px 8px;text-align:left;vertical-align:top}
+</style></head><body>
+<h1>LekhaPal – Install & User Guide</h1>
+<p class="box">Accounting, inventory, VAT, TDS, IRD e-billing and NFRS financial statements for Nepal.<br>Developed by <b>CA Sudanshu Mallick</b> · ca.sudanshu@gmail.com</p>
+
+<h2>1. Installing</h2>
+<h3>A. On a Windows laptop (works fully offline)</h3>
+<ol><li>Copy the <b>LekhaPal</b> folder anywhere (e.g. <code>D:\LekhaPal</code>).</li>
+<li>Double-click <b>Start LekhaPal (Windows).bat</b>. A small black window opens and LekhaPal opens in Chrome / Edge at <code>http://localhost:8765</code>. Keep the black window open while working.</li>
+<li>In Chrome/Edge click the <b>Install</b> icon in the address bar (or menu › <i>Install LekhaPal</i>). It then opens like a normal app from the Start menu. You still start the .bat first each day (or put a shortcut to it in your Startup folder).</li></ol>
+<h3>B. On a Mac</h3><p>Double-click <b>Start LekhaPal (Mac).command</b> (first time: right-click › Open). Then install from Chrome as above.</p>
+<h3>C. From the web link (any laptop or mobile)</h3>
+<ol><li>Open your web link (see section 6 for how to create it), e.g. <code>https://yourname.github.io/smlekha/</code>.</li>
+<li>On Android Chrome: menu › <b>Add to Home screen / Install app</b>. On iPhone Safari: Share › <b>Add to Home Screen</b>.</li>
+<li>After the first opening, the app and the bill reader work offline.</li></ol>
+<p class="warn"><b>Where is my data?</b> Data is stored inside the browser on that device. Each device (and the local .bat version vs. the web link) has its own separate data. To move data between devices use <b>Settings › Download backup file</b> and <b>Restore from backup</b> on the other device. Take backups regularly – clearing browser data deletes the books. On a computer you can switch on <b>Automatic daily backup to a folder</b> (e.g. a Google Drive / OneDrive folder).</p>
+
+<h2>2. First start</h2>
+<ol><li>Create the administrator login (name, email, password). Save the <b>recovery code</b> shown – it resets your password if you forget it.</li>
+<li><b>Entities / clients › + New entity</b>. Choose type (company, proprietorship, partnership, NGO/NPO, cooperative…). A standard Nepal chart of accounts is created automatically.</li>
+<li>Fill <b>Legal details</b> (registration, PAN/VAT, capital, directors, shareholders, licences with expiry dates).</li>
+<li>Enter opening balances: <b>Upload Excel › Ledgers & opening trial balance</b> and <b>Items & opening stock</b> (templates provided), or type them in Ledgers / Items.</li>
+<li>Check <b>Trial balance</b> – it should tally. If it shows "Difference in opening balances", correct the openings.</li></ol>
+
+<h2>3. Daily work</h2>
+<table><tr><th>Task</th><th>Where</th></tr>
+<tr><td>Sales invoice (prints IRD-format tax invoice)</td><td>New entry › Sales. Type customer (new parties are created automatically), items, qty, rate. VAT, stock and ledgers update automatically.</td></tr>
+<tr><td>Purchase bill / expense bill / fixed asset</td><td>New entry › Purchase. Lines can be stock items or ledgers (rent, freight…). Tick <i>Import</i> or <i>Capital purchase</i> as needed. Enter TDS % if you deduct TDS.</td></tr>
+<tr><td>Receipts, payments (with TDS), contra, journal</td><td>New entry › Receipt / Payment / Contra / Journal</td></tr>
+<tr><td>Sales return / purchase return</td><td>Credit Note / Debit Note (stock and VAT reverse automatically)</td></tr>
+<tr><td>Damage, own use, transfers between godowns, physical count</td><td>Stock Journal, or Stock summary › Physical stock verification</td></tr>
+<tr><td>Many similar entries (a month of expense bills, cash sales)</td><td>Bulk entry</td></tr>
+<tr><td>Bill photos / PDFs</td><td>Scan bills › choose the folder. Review each bill (party, PAN, invoice no., dates, taxable, VAT, total, items) and click Post. The photo is saved in Documents and linked to the entry.</td></tr>
+<tr><td>Excel from client or other software</td><td>Upload Excel (ledgers/TB, items, sales, purchases, journals)</td></tr></table>
+<p>Keyboard: <kbd>Alt+S</kbd> sales, <kbd>Alt+P</kbd> purchase, <kbd>Alt+R</kbd> receipt, <kbd>Alt+Y</kbd> payment, <kbd>Alt+J</kbd> journal. Dates are typed in BS (YYYY-MM-DD); AD is shown below.</p>
+
+<h2>4. Reports for finalisation</h2>
+<ul><li><b>Trial balance, Profit & loss, Balance sheet</b> – summary or detailed, any period, Excel / PDF.</li>
+<li><b>NFRS statements</b> – Full NFRS, NFRS for SMEs, NAS for Micro Entities, NPO formats: financial position, P&L (& OCI, EPS), changes in equity, cash flow and notes, with previous-year comparatives. Export all to Excel.</li>
+<li><b>FS mapping</b> (Ledgers › FS mapping) – move any ledger to a different statement line; <b>Health check</b> cross-verifies TB, negative stock/cash, VAT ledger vs registers, missing PAN, duplicate bills, large cash payments.</li>
+<li><b>VAT, TDS & IRD</b> – sales book, purchase book, monthly VAT return figures, VAT reconciliation with returns filed, 1-lakh details (Annex 13) export, missing sales/purchase reconciliation against IRD/third-party data, TDS register, CBMS e-billing, IRD bill register.</li>
+<li><b>Stock summary & item ledger</b> (weighted average or FIFO), ageing, ratios, cash flow, bank reconciliation, financial projections (up to 10 years), income tax tools (pool depreciation, advance tax).</li></ul>
+
+<h2>5. Users, clients and licences</h2>
+<ul><li><b>Users & access</b>: give staff or clients their own login, choose which entities and which sections (entries, reports, VAT, documents…) they can use.</li>
+<li><b>Licence</b>: each install starts with a 30-day trial (3 entities, 2 users); after that it becomes read-only until a licence key is entered in Settings.</li>
+<li><b>For CA Sudanshu Mallick only</b>: Settings › Developer tools › load <code>ADMIN-PRIVATE-LICENSE-KEY.json</code> to generate licence keys (choose client, plan, number of entities/users, expiry) and admin password reset codes. <b>Never share or upload that file.</b> If a client's administrator forgets the password and has no recovery code, they send you the Install ID shown on the "Forgot password" screen; you generate a reset code.</li></ul>
+
+<h2>6. Your own web link (hosted on your personal account)</h2>
+<ol><li>Sign in to <a href="https://github.com">github.com</a> with ca.sudanshu@gmail.com (create a free account).</li>
+<li>New repository › name <code>smlekha</code> › Public › Create.</li>
+<li>"uploading an existing file" › drag in <b>all files and folders inside</b> the LekhaPal folder (not the private key) › Commit.</li>
+<li>Settings › Pages › Source: <i>Deploy from a branch</i>, branch <i>main</i>, folder <i>/ (root)</i> › Save. After a minute your link is <code>https://&lt;username&gt;.github.io/smlekha/</code>.</li></ol>
+<p>Alternative: drag the folder onto <a href="https://app.netlify.com/drop">app.netlify.com/drop</a> while logged in with the same Gmail.</p>
+<p><b>Publishing Nepal updates to all clients</b>: in the app, Nepal updates › + Add update, then <i>Export for publishing</i> and upload the downloaded <code>updates.json</code> to the repository (replace the old one). Every client who clicks "Check for new updates" while online receives them. Clients using a different copy should set Settings › Updates feed address to <code>https://&lt;username&gt;.github.io/smlekha/updates.json</code>.</p>
+<p><b>Releasing a new version</b>: replace the changed files in the repository and change the version line <code>const CACHE = 'smlekha-v1.0.0'</code> in <code>sw.js</code> (e.g. to v1.0.1) so devices refresh.</p>
+
+<h2>7. New in version 1.1</h2>
+<ul><li><b>Migrate client</b> (menu › Entries): five steps – cut-over date, Tally XML masters (or Excel), previous-year P&L for comparatives, day-book transactions, and verification against the old trial balance.</li>
+<li><b>Customers & suppliers</b>: separate party list with PAN, credit days, balances, Excel upload and merging of duplicates.</li>
+<li><b>VAT rate per line</b>: 13% by default, Exempt, or "Other %…" for any rate.</li>
+<li><b>Locked books</b>: when an entry falls in a locked period you can move or remove the lock right there.</li>
+<li><b>Drafts</b>: half-filled entries are saved automatically; continue them from New entry or the dashboard.</li>
+<li><b>Comparatives</b>: trial balance, P&L, balance sheet, cash flow, ratios and NFRS statements always show the previous year.</li>
+<li><b>Client stock list upload</b> (Items › Upload client stock list): set as opening stock, or adjust books to a physical count.</li>
+<li><b>Depreciation (IRD)</b>: pool A–D schedule with the 1/3 – 2/3 addition rule, 7% repairs limit, pool E amortisation, "Fill from books" and one-click journal posting.</li>
+<li><b>Income tax computation</b>: nature of taxpayer (25% / 30% / 20% / cooperative / exempt NPO / individual slabs), add-backs and deductions, donation & loss limits, TDS and advance tax, interest u/s 118 & 119, fee u/s 117, advance-tax plan, override of any figure, and posting of the tax journal.</li>
+<li><b>My firm books</b> (🏢 button at the top): your own firm's accounts. <b>Jobs, fees & collection</b>: record each job by type of work, bill fees and record collections (posted automatically into your firm books, with TDS), attach finalized files and view them inside the app. Fee reports by type of work and by client.</li>
+<li><b>Admin & subscriptions</b> (🔑 button): plans (monthly, yearly, 2, 3, 5 years, lifetime – prices editable), subscriber register with expiry alerts, licence key generation, renewals, billing into firm books, and creating client logins.</li>
+<li><b>Daily automatic backup</b>: choose a folder for all data and/or a folder per client (also when creating a client). One encrypted file per day, last 30 kept. In Chrome/Edge you may be asked once per session to allow access – click "Allow & back up now" on the dashboard.</li></ul>
+<h2>8. Two editions – Nepal and International</h2>
+<ul><li><b>Nepal edition</b>: BS dates, Shrawan–Ashadh year, NPR, VAT/PAN/TDS, IRD (CBMS, Annex 13), IRD pool depreciation, Nepal income tax, NFRS / NFRS for SMEs / NAS for MEs.</li>
+<li><b>International edition</b>: normal (AD) dates, any financial-year start month, any currency, VAT / GST / Sales Tax at any rate with monthly or quarterly returns, withholding tax, asset-class depreciation (straight-line or reducing balance), corporate / individual tax computation with country rate and threshold, and <b>IFRS / IFRS for SMEs</b> statements. Country presets: UAE, Saudi Arabia, Qatar, Oman, Bahrain, Kuwait, India, UK, USA, Australia, Singapore, Malaysia, Bangladesh, Sri Lanka, or any other country – every preset value can be changed in Settings › Country, currency & tax.</li>
+<li>The edition is chosen per client when you create the entity. Your own licence includes both.</li>
+<li><b>Selling</b>: in Admin › Subscriptions choose "Edition the client gets" – Nepal, International or Both – and the fee currency. The licence key then only opens that edition; a Nepal-only key cannot open international books and vice versa.</li></ul>
+<h2>9. Important notes</h2>
+<ul><li>IRD approval: to sell LekhaPal as billing software to businesses that must use IRD-registered / CBMS-connected billing, the software has to be registered with IRD under its electronic billing procedure. The app already follows the main rules (no deletion of invoices, cancel with reason, "Copy of original" on reprints, audit trail, bill register view, CBMS API), but registration is a separate application you make to IRD.</li>
+<li>CBMS: get API username/password from IRD and enter them in Settings. If the IRD server blocks direct browser connections, use <i>Export in CBMS format</i>.</li>
+<li>Tax rates, thresholds and due dates in the app are defaults – check after each budget and edit in Updates / Settings.</li>
+<li>Bill scanning accuracy depends on photo quality; always review before posting.</li></ul>
+</body></html>

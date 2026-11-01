@@ -1,0 +1,14 @@
+{
+  "name": "LekhaPal – Accounting by CA Sudanshu Mallick",
+  "short_name": "LekhaPal",
+  "description": "Offline accounting, inventory, VAT and NFRS financial statements for Nepal.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f5",
+  "theme_color": "#0f5132",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
